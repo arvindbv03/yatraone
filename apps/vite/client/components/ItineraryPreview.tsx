@@ -25,7 +25,7 @@ export function ItineraryPreview({ days, trip }: { days: Day[]; trip: Trip }) {
             </div>
             <ul className="mt-ds-md space-y-ds-md border-l-2 border-border pl-ds-lg" data-oid="2af2e20720" data-oid-shared="true" data-oid-instance-targetable="true">
               {d.legs.map((leg, i) => (
-                <li key={i} className="relative" data-oid="70d289fa53" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="element:span|expression:e0e7c17663c9|expression:1af6fa0d2340|expression:03bcbd0011ca">
+                <li key={i} className="relative" data-oid="70d289fa53" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="element:span|expression:a3f7bce1a341|expression:a0ecd1da9d38|expression:0e1656d88952">
                   <span className="absolute -left-[37px] top-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-card bg-muted text-primary" data-oid="3cfae86dec" data-oid-shared="true" data-oid-instance-targetable="true">
                     {leg.kind === "travel" ? <Car className="h-3.5 w-3.5" data-oid="8d7a2ada1f" data-oid-shared="true" /> : leg.kind === "visit" ? <Landmark className="h-3.5 w-3.5" data-oid="266d19a725" data-oid-shared="true" /> : <Coffee className="h-3.5 w-3.5" data-oid="bd53447d31" data-oid-shared="true" />}
                   </span>

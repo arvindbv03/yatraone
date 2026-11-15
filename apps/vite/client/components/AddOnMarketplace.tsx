@@ -28,7 +28,7 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
     <section id="addons" className="scroll-mt-20 bg-primary text-primary-foreground" data-oid="639a2b0be2" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
       <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="d775ed7a91">
         <div className="grid gap-ds-xl lg:grid-cols-12" data-oid="bf43d355ed">
-          <div className="lg:col-span-4" data-oid="ebc6a311ba" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:9e112711db20">
+          <div className="lg:col-span-4" data-oid="ebc6a311ba" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:f01e741ab29b">
             <p className="text-label font-semibold uppercase text-secondary" data-oid="da93016e1e">Add-on marketplace</p>
             <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em]" data-oid="1b0453d598">Help on the ground, from verified local providers</h2>
             <p className="mt-ds-md text-body opacity-80" data-oid="a597f1724b">Every add-on is fulfilled by a KYC-verified vendor and appears as its own line in your estimate.</p>

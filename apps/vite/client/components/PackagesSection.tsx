@@ -83,7 +83,7 @@ export function PackagesSection({ onLoad }: { onLoad: (patch: Partial<Trip>) => 
               e.preventDefault()
               setSent(`MY-DEMO-${Math.floor(1000 + Math.random() * 9000)}`)
               e.currentTarget.reset()
-            }} data-oid="6b7b1cee36" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|element:div|element:div|element:div|element:div|expression:624ad4321561"
+            }} data-oid="6b7b1cee36" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|element:div|element:div|element:div|element:div|expression:cad6c17ea330"
           >
             <div className="ds-field sm:col-span-2" data-oid="e69512022c">
               <label htmlFor="my-dest" className="ds-field-label" data-oid="0522417499">Destinations</label>

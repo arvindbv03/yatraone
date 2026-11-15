@@ -30,7 +30,7 @@ export function DiscoverySection({
 
   return (
     <section id="discover" className="scroll-mt-20 border-y border-border bg-card" data-oid="1a6538a133" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
-      <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="f6f1554dcd" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:ul|expression:8b7e74b03134">
+      <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="f6f1554dcd" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:ul|expression:4c73e5388c23">
         <div className="grid gap-ds-xl lg:grid-cols-12 lg:items-end" data-oid="5b3a8837aa">
           <div className="lg:col-span-5" data-oid="5b7a3957e3">
             <p className="text-label font-semibold uppercase text-secondary" data-oid="c6050d5f53">Discover</p>
@@ -49,7 +49,7 @@ export function DiscoverySection({
                 className="h-12 w-full bg-transparent text-body outline-none placeholder:text-muted-foreground" data-oid="5b195797df"
               />
             </div>
-            <div className="flex flex-wrap items-center gap-ds-sm" data-oid="ce72e9735d" data-oid-text-editable="false" data-oid-text-source="expression:243270cc0d86|element:label|element:select">
+            <div className="flex flex-wrap items-center gap-ds-sm" data-oid="ce72e9735d" data-oid-text-editable="false" data-oid-text-source="expression:19228ffd1a0f|element:label|element:select">
               {STATES.map((s) => (
                 <button
                   key={s}
@@ -98,7 +98,7 @@ export function DiscoverySection({
                     type="button"
                     aria-pressed={added}
                     onClick={() => onToggle(d.id)}
-                    className="ds-button ds-button-secondary aria-pressed:bg-primary aria-pressed:text-primary-foreground" data-oid="27ac5d93c7" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="expression:ca338ed21ffe|expression:758efc9b68c3"
+                    className="ds-button ds-button-secondary aria-pressed:bg-primary aria-pressed:text-primary-foreground" data-oid="27ac5d93c7" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="expression:d5e804dc0d13|expression:758efc9b68c3"
                   >
                     {added ? <Check className="mr-ds-xs h-4 w-4" data-oid="10d85c6a45" data-oid-shared="true" /> : <Plus className="mr-ds-xs h-4 w-4" data-oid="89ce0eeade" data-oid-shared="true" />}
                     {added ? "In trip" : "Add to trip"}

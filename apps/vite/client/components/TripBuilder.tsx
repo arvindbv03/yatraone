@@ -44,7 +44,7 @@ export function TripBuilder({ api }: { api: TripApi }) {
 
         <div className="mt-ds-xl grid gap-ds-lg lg:grid-cols-12" data-oid="5974381954">
           {/* Route */}
-          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-5" data-oid="3c7a4b20cf" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|element:ol|expression:640ea30d8ca2|element:p|element:div">
+          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-5" data-oid="3c7a4b20cf" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|element:ol|expression:f1f68ddde2a1|element:p|element:div">
             <h3 className="text-xl font-bold tracking-tight" data-oid="42bce507d9">Route</h3>
             <div className="ds-field mt-ds-md" data-oid="c0c5c3a8b5">
               <label htmlFor="origin" className="ds-field-label" data-oid="6b2902cc64">Starting from</label>
@@ -79,7 +79,7 @@ export function TripBuilder({ api }: { api: TripApi }) {
             <div className="ds-field mt-ds-lg" data-oid="aef01d0180">
               <label htmlFor="add-stop" className="ds-field-label" data-oid="4f7532f41f">Add a stop</label>
               <div className="flex gap-ds-sm" data-oid="fdbd915022">
-                <select id="add-stop" className="ds-input flex-1" defaultValue="" onChange={(e) => { if (e.target.value) { toggleDestination(e.target.value); e.target.value = "" } }} data-oid="56c009abf6" data-oid-text-editable="false" data-oid-text-source="element:option|expression:9033ab0d038a">
+                <select id="add-stop" className="ds-input flex-1" defaultValue="" onChange={(e) => { if (e.target.value) { toggleDestination(e.target.value); e.target.value = "" } }} data-oid="56c009abf6" data-oid-text-editable="false" data-oid-text-source="element:option|expression:78f92ac15e2b">
                   <option value="" data-oid="a535e9776c">Choose a destination…</option>
                   {notInTrip.map((d) => (
                     <option key={d.id} value={d.id} data-oid="943fa2e170" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="expression:c1f8af107f8f|text|expression:bcb9e1b213ec">{d.name} — {d.town}</option>
@@ -131,7 +131,7 @@ export function TripBuilder({ api }: { api: TripApi }) {
           </div>
 
           {/* Transport */}
-          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-7" data-oid="32953b700d" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|expression:48017e224607|expression:030a0303e173">
+          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-7" data-oid="32953b700d" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|expression:9ff6a18c9432|expression:7e008eb5c989">
             <h3 className="text-xl font-bold tracking-tight" data-oid="ac1a18d93b">Transport</h3>
             <div className="ds-radio-group mt-ds-md grid gap-ds-sm sm:grid-cols-2" role="radiogroup" aria-label="Vehicle" data-oid="2eaed8031e">
               {TRANSPORT.map((v) => (
@@ -153,7 +153,7 @@ export function TripBuilder({ api }: { api: TripApi }) {
           </div>
 
           {/* Stay */}
-          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-5" data-oid="2af25e00ee" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|expression:c50ae1628f0b">
+          <div className="rounded-xl border border-border bg-card p-ds-lg lg:col-span-5" data-oid="2af25e00ee" data-oid-text-editable="false" data-oid-text-source="element:h3|element:div|expression:8bb5f9454987">
             <h3 className="text-xl font-bold tracking-tight" data-oid="27e7d8e5c2">Stay</h3>
             <div className="ds-radio-group mt-ds-md flex flex-col gap-ds-sm" role="radiogroup" aria-label="Accommodation" data-oid="4b5f8e2dc7">
               {HOTELS.map((h) => (

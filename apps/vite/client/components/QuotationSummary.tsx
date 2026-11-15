@@ -8,7 +8,7 @@ export function QuotationSummary({ trip }: { trip: Trip }) {
   const accessibleMismatch = trip.wheelchair && !q.t.wheelchair
 
   return (
-    <aside id="quote" className="scroll-mt-20 rounded-xl border border-border bg-card p-ds-lg shadow-lg lg:sticky lg:top-24" data-oid="0a19db485f" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:dl|expression:3433b53751e3|element:p|element:button|expression:5130a29880ce">
+    <aside id="quote" className="scroll-mt-20 rounded-xl border border-border bg-card p-ds-lg shadow-lg lg:sticky lg:top-24" data-oid="0a19db485f" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:dl|expression:eba6ed1d7a58|element:p|element:button|expression:7db9d3bd3648">
       <div className="flex items-center justify-between gap-ds-sm" data-oid="6481add6a1">
         <h2 className="text-heading font-bold text-foreground" data-oid="aaabf9c084">Itemized estimate</h2>
         <span className="rounded-full bg-accent px-ds-sm py-ds-xs text-caption font-medium text-accent-foreground" data-oid="5a0717ab8b">Estimate</span>
@@ -17,7 +17,7 @@ export function QuotationSummary({ trip }: { trip: Trip }) {
         {q.pax} travellers · {q.days} days · {q.nights} nights
       </p>
 
-      <dl className="mt-ds-lg space-y-ds-md text-label" data-oid="87531236f0" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|expression:96fa2b2d560d|expression:5a79dc6b664c|element:div|element:div|element:div|element:div">
+      <dl className="mt-ds-lg space-y-ds-md text-label" data-oid="87531236f0" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|expression:bd0da6c7b920|expression:b56956c8a5da|element:div|element:div|element:div|element:div">
         <div className="flex justify-between gap-ds-md" data-oid="fbdbf00779">
           <dt className="text-foreground" data-oid="2f3b19c0a3">
             Transport
