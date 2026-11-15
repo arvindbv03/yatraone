@@ -28,12 +28,19 @@ export function DiscoverySection({
     })
   }, [query, state, category])
 
+  const filtered = query.trim() !== "" || state !== "All" || category !== "All"
+  const clearAll = () => {
+    setQuery("")
+    setState("All")
+    setCategory("All")
+  }
+
   return (
     <section id="discover" className="scroll-mt-20 border-y border-border bg-card" data-oid="1a6538a133" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
-      <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="f6f1554dcd" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:ul|expression:4c73e5388c23">
+      <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="f6f1554dcd" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|element:ul|expression:cb61b5db5cef">
         <div className="grid gap-ds-xl lg:grid-cols-12 lg:items-end" data-oid="5b3a8837aa">
           <div className="lg:col-span-5" data-oid="5b7a3957e3">
-            <p className="text-label font-semibold uppercase text-secondary" data-oid="c6050d5f53">Discover</p>
+            <p className="text-label font-semibold uppercase text-secondary" data-oid="c6050d5f53">Step 1 · Pick temples</p>
             <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground" data-oid="81fb3dadb1">Temples and sacred places of the South</h2>
             <p className="mt-ds-md text-body text-muted-foreground" data-oid="5f32a179ed">Search by temple, town, circuit or deity. Walking effort is shown for every stop so you can plan around elders.</p>
           </div>
@@ -72,7 +79,15 @@ export function DiscoverySection({
           </div>
         </div>
 
-        <p className="mt-ds-xl text-label text-muted-foreground" data-oid="f73a6d4a70" data-oid-text-editable="false" data-oid-text-source="expression:4d75694edc50|text|expression:33a1e03a9294|text">{results.length} destination{results.length === 1 ? "" : "s"} found</p>
+        <div className="mt-ds-xl flex flex-wrap items-center gap-ds-md" data-oid="c98402c77f" data-oid-text-editable="false" data-oid-text-source="element:p|expression:27d992afa7b8|expression:5baeda636968">
+          <p className="text-label text-muted-foreground" data-oid="f73a6d4a70" data-oid-text-editable="false" data-oid-text-source="expression:4d75694edc50|text|expression:33a1e03a9294|text|expression:ce01abed499c">{results.length} destination{results.length === 1 ? "" : "s"} found{selected.length > 0 ? ` · ${selected.length} in your trip` : ""}</p>
+          {filtered && (
+            <button type="button" onClick={clearAll} className="text-label font-semibold text-primary underline underline-offset-4" data-oid="8253930db4">Clear search & filters</button>
+          )}
+          {selected.length > 0 && (
+            <a href="#builder" className="ml-auto ds-button ds-button-primary" data-oid="4346b4c131">Next: dates & travellers</a>
+          )}
+        </div>
         <ul className="mt-ds-md grid gap-ds-md sm:grid-cols-2 xl:grid-cols-3" data-oid="2cd9589294">
           {results.map((d, index) => {
             const added = selected.includes(d.id)
@@ -109,7 +124,10 @@ export function DiscoverySection({
           })}
         </ul>
         {results.length === 0 && (
-          <p className="mt-ds-lg rounded-lg border border-dashed border-border p-ds-xl text-center text-body text-muted-foreground" data-oid="3d7d9b6f18">No destinations match. Try a town name or clear the filters.</p>
+          <div className="mt-ds-lg rounded-lg border border-dashed border-border p-ds-xl text-center" data-oid="3d7d9b6f18">
+            <p className="text-body text-muted-foreground" data-oid="cb08cfc8c8">No destinations match. Try a town name like “Madurai”.</p>
+            <button type="button" onClick={clearAll} className="ds-button ds-button-secondary mt-ds-md" data-oid="2782b717c7">Show all destinations</button>
+          </div>
         )}
       </div>
     </section>

@@ -6,9 +6,9 @@ function Stepper({ id, label, api }: { id: AddOnId; label: string; api: TripApi 
   const v = api.trip.addOns[id]
   return (
     <div className="flex items-center gap-ds-sm" data-oid="38bea05187" data-oid-instance-targetable="true" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">
-      <button type="button" aria-label={`Remove one ${label}`} onClick={() => api.setAddOn(id, v - 1)} className="flex h-9 w-9 items-center justify-center rounded-md border border-border hover:border-primary" data-oid="b848ac59d3" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">−</button>
-      <output className="w-6 text-center text-body font-semibold" data-oid="6d9a348221" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">{v}</output>
-      <button type="button" aria-label={`Add one ${label}`} onClick={() => api.setAddOn(id, v + 1)} className="flex h-9 w-9 items-center justify-center rounded-md border border-border hover:border-primary" data-oid="6f473cd349" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">+</button>
+      <button type="button" aria-label={`Remove one ${label}`} disabled={v === 0} onClick={() => api.setAddOn(id, v - 1)} className="flex h-11 w-11 items-center justify-center rounded-md border border-border text-xl font-semibold hover:border-primary hover:text-primary disabled:opacity-40" data-oid="b848ac59d3" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">−</button>
+      <output aria-live="polite" className="w-8 text-center text-xl font-bold" data-oid="6d9a348221" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">{v}</output>
+      <button type="button" aria-label={`Add one ${label}`} onClick={() => api.setAddOn(id, v + 1)} className="flex h-11 w-11 items-center justify-center rounded-md border border-border text-xl font-semibold hover:border-primary hover:text-primary disabled:opacity-40" data-oid="6f473cd349" data-oid-instance-targetable="true" data-oid-callsite-deletable="true" data-oid-callsite-editable="true">+</button>
     </div>
   )
 }
@@ -29,7 +29,7 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
       <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="d775ed7a91">
         <div className="grid gap-ds-xl lg:grid-cols-12" data-oid="bf43d355ed">
           <div className="lg:col-span-4" data-oid="ebc6a311ba" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:f01e741ab29b">
-            <p className="text-label font-semibold uppercase text-secondary" data-oid="da93016e1e">Add-on marketplace</p>
+            <p className="text-label font-semibold uppercase text-secondary" data-oid="da93016e1e">Step 4 · Extra help (optional)</p>
             <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em]" data-oid="1b0453d598">Help on the ground, from verified local providers</h2>
             <p className="mt-ds-md text-body opacity-80" data-oid="a597f1724b">Every add-on is fulfilled by a KYC-verified vendor and appears as its own line in your estimate.</p>
             {needsChair && (

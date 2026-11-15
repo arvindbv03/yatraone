@@ -8,21 +8,37 @@ const fmtH = (h: number) => {
 
 export function ItineraryPreview({ days, trip }: { days: Day[]; trip: Trip }) {
   return (
-    <div id="itinerary" className="scroll-mt-20" data-oid="172e90123e" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
-      <p className="text-label font-semibold uppercase text-secondary" data-oid="ac215b40fe">Itinerary preview</p>
+    <div id="itinerary" className="scroll-mt-20" data-oid="172e90123e" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:08544b14cf10|element:ol">
+      <p className="text-label font-semibold uppercase text-secondary" data-oid="ac215b40fe">Step 3 · Your plan</p>
       <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground" data-oid="ac408a046a">Day by day, at your pace</h2>
       <p className="mt-ds-md flex items-start gap-ds-sm rounded-lg border border-warning bg-warning/10 p-ds-md text-label text-foreground" data-oid="210c5ace1d">
         <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-warning" data-oid="fd479a5ef3" />
         Estimated plan only. Driving distances and times are rough straight-line approximations; official temple timings, darshan slots and hotel availability all require verification before booking.
       </p>
 
+      {trip.destinationIds.length === 0 && (
+        <div className="mt-ds-xl rounded-xl border border-dashed border-border bg-card p-ds-xl text-center" data-oid="89200faa06">
+          <p className="text-body font-semibold text-foreground" data-oid="a5351de5c9">Your plan will appear here</p>
+          <p className="mt-ds-xs text-label text-muted-foreground" data-oid="41f74b89fb">Add at least one temple and we’ll lay out each day for you.</p>
+          <a href="#discover" className="ds-button ds-button-primary mt-ds-md" data-oid="4ed0bf1328">Choose temples</a>
+        </div>
+      )}
+
       <ol className="mt-ds-xl space-y-ds-lg" data-oid="b6db34d7b1">
-        {days.map((d) => (
-          <li key={d.day} className="rounded-xl border border-border bg-card p-ds-lg" data-oid="a5351de5c9" data-oid-shared="true" data-oid-instance-targetable="true">
+        {trip.destinationIds.length > 0 && days.map((d) => {
+          const driveHours = d.legs.reduce((s, l) => s + (l.kind === "travel" ? l.hours : 0), 0)
+          return (
+          <li key={d.day} className="rounded-xl border border-border bg-card p-ds-lg" data-oid="37ec7267af" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="element:div|expression:d6fe09666b6f|element:ul">
             <div className="flex items-baseline justify-between gap-ds-md" data-oid="2526765255" data-oid-shared="true" data-oid-instance-targetable="true">
               <h3 className="text-xl font-bold tracking-tight text-foreground" data-oid="834e1cb8a4" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="text|expression:ee2c6c2f26c0">Day {d.day}</h3>
-              <p className="text-label text-muted-foreground" data-oid="ff33087767" data-oid-shared="true" data-oid-instance-targetable="true">{d.date}</p>
+              <p className="text-label text-muted-foreground" data-oid="ff33087767" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="expression:8e479182e10d|expression:2c9789919182">{d.date}{driveHours > 0 ? ` · ~${Math.round(driveHours)} hrs on the road` : ""}</p>
             </div>
+            {driveHours > 7 && (
+              <p className="mt-ds-sm flex items-start gap-ds-sm rounded-lg bg-warning/15 p-ds-sm text-caption text-foreground" data-oid="7194ea03b1" data-oid-shared="true">
+                <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-warning" data-oid="492d79b3cb" data-oid-shared="true" />
+                Long driving day. Add a day or reorder temples to make it easier on elders.
+              </p>
+            )}
             <ul className="mt-ds-md space-y-ds-md border-l-2 border-border pl-ds-lg" data-oid="2af2e20720" data-oid-shared="true" data-oid-instance-targetable="true">
               {d.legs.map((leg, i) => (
                 <li key={i} className="relative" data-oid="70d289fa53" data-oid-shared="true" data-oid-instance-targetable="true" data-oid-text-editable="false" data-oid-text-source="element:span|expression:a3f7bce1a341|expression:a0ecd1da9d38|expression:0e1656d88952">
@@ -50,7 +66,8 @@ export function ItineraryPreview({ days, trip }: { days: Day[]; trip: Trip }) {
               ))}
             </ul>
           </li>
-        ))}
+          )
+        })}
       </ol>
     </div>
   )

@@ -10,7 +10,7 @@ export function TripTray({ api }: { api: TripApi }) {
 
   return (
     <aside aria-label="Your trip summary" className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/95 shadow-2xl backdrop-blur" data-oid="92fe81d2f4" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-ds-lg px-ds-lg py-ds-md" data-oid="b66de60f52" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|expression:b3bd19daeb75|element:p|element:div">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-ds-lg px-ds-lg py-ds-md" data-oid="b66de60f52" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|expression:ecafd34e4748|element:p|element:div">
         <div className="flex min-w-0 flex-1 items-center gap-ds-md" data-oid="7d82713c76">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground" data-oid="14a2fdf61a">
             <MapPin className="h-5 w-5" data-oid="526bcd198f" />
@@ -35,7 +35,7 @@ export function TripTray({ api }: { api: TripApi }) {
 
         <p className="hidden text-caption text-muted-foreground xl:block" aria-live="polite" data-oid="1eeb62e003">{savedAt ? `Saved at ${savedAt}` : "Saves automatically"}</p>
 
-        <div className="flex items-center gap-ds-sm" data-oid="4faf41860e" data-oid-text-editable="false" data-oid-text-source="expression:f142223bafbf|expression:e5822bd9d4f0">
+        <div className="flex items-center gap-ds-sm" data-oid="4faf41860e" data-oid-text-editable="false" data-oid-text-source="expression:80b008a15a43|expression:54df55371757">
           {hasStops && (
             <button type="button" onClick={reset} className="ds-button ds-button-secondary" data-oid="dd39a46224">
               <RotateCcw className="mr-ds-xs h-4 w-4" data-oid="12beafd6d4" />
