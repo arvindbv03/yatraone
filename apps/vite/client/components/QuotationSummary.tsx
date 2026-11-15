@@ -8,9 +8,9 @@ export function QuotationSummary({ trip }: { trip: Trip }) {
   const accessibleMismatch = trip.wheelchair && !q.t.wheelchair
 
   return (
-    <aside id="quote" className="scroll-mt-20 rounded-xl border border-border bg-card p-ds-lg shadow-lg lg:sticky lg:top-24" data-oid="0a19db485f" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:dl|expression:eba6ed1d7a58|element:p|element:button|expression:3fd67ddb88eb|expression:7db9d3bd3648">
+    <aside id="quote" className="scroll-mt-20 rounded-xl border border-border bg-card p-ds-lg shadow-lg lg:sticky lg:top-24" data-oid="0a19db485f" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true" data-oid-text-editable="false" data-oid-text-source="element:div|element:p|element:dl|expression:3b1f2d4d8457|element:p|element:button|expression:6409e677ecaa|expression:31800759963d">
       <div className="flex items-center justify-between gap-ds-sm" data-oid="6481add6a1">
-        <h2 className="text-heading font-bold text-foreground" data-oid="aaabf9c084">What it may cost</h2>
+        <h2 className="text-heading font-bold text-foreground" data-oid="aaabf9c084">Estimate</h2>
         <span className="rounded-full bg-warning/20 px-ds-sm py-ds-xs text-caption font-medium text-foreground" data-oid="5a0717ab8b">Estimate · requires verification</span>
       </div>
       <p className="mt-ds-xs text-label text-muted-foreground" data-oid="14c2af57e1" data-oid-text-editable="false" data-oid-text-source="expression:8428276ad1b1|text|expression:58fc1ab213a2|text|expression:c9f27971a52a|text">
@@ -66,24 +66,24 @@ export function QuotationSummary({ trip }: { trip: Trip }) {
       {accessibleMismatch && (
         <p className="mt-ds-lg flex items-start gap-ds-sm rounded-lg bg-warning/15 p-ds-md text-caption text-foreground" data-oid="de8c0c00d1">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-warning" data-oid="f3e2f59d7f" />
-          Selected vehicle is not wheelchair-accessible.
+          Vehicle has no wheelchair ramp.
         </p>
       )}
 
       <p className="mt-ds-lg flex items-start gap-ds-sm rounded-lg bg-muted p-ds-md text-caption text-muted-foreground" data-oid="21aeaa2b0f">
         <Info className="mt-0.5 h-4 w-4 shrink-0" data-oid="121b6ca346" />
-        Prices are estimates until each vendor confirms availability and rates. You’ll see any change before you approve — no hidden fees.
+        Final prices are confirmed by vendors. No hidden fees.
       </p>
 
       <button type="button" onClick={() => setRequested(true)} disabled={trip.destinationIds.length === 0} className="ds-button ds-button-primary mt-ds-lg w-full" data-oid="fc94920331">
-        Request vendor confirmation (demo)
+        Request confirmation (demo)
       </button>
       {trip.destinationIds.length === 0 && (
-        <p className="mt-ds-sm text-center text-caption text-muted-foreground" data-oid="f5637a7443">Add a temple first to request confirmation.</p>
+        <p className="mt-ds-sm text-center text-caption text-muted-foreground" data-oid="f5637a7443">Add a temple first.</p>
       )}
       {requested && (
         <p role="status" className="mt-ds-sm text-caption text-success" data-oid="6a9cbd9a01">
-          Demo only: no booking, hold or payment was made. In the live product, each vendor would confirm before you pay an advance.
+          Demo only — nothing was booked or paid.
         </p>
       )}
     </aside>

@@ -16,8 +16,8 @@ export function PackagesSection({ onLoad }: { onLoad: (patch: Partial<Trip>) => 
       <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="2b61599fd5">
         <div className="max-w-2xl" data-oid="18a70ef030">
           <p className="text-label font-semibold uppercase text-secondary" data-oid="e94c764945">Curated packages</p>
-          <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground" data-oid="924198b17f">Our launch circuits, ready to customise</h2>
-          <p className="mt-ds-md text-body text-muted-foreground" data-oid="86d4c18f2d">Start from a route our operations team has tested, then adjust stops, pace and stays in the trip builder.</p>
+          <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground" data-oid="924198b17f">Ready-made circuits</h2>
+          <p className="mt-ds-md text-body text-muted-foreground" data-oid="86d4c18f2d">Start here, then adjust anything.</p>
         </div>
 
         <div className="mt-ds-xl grid gap-ds-lg lg:grid-cols-12" data-oid="9d8f5f4a99">
@@ -69,12 +69,12 @@ export function PackagesSection({ onLoad }: { onLoad: (patch: Partial<Trip>) => 
           <div className="bg-accent p-ds-xl lg:col-span-5" data-oid="5ddc5c1c91">
             <p className="text-label font-semibold uppercase text-accent-foreground" data-oid="3429f42a11">Managed Yatra</p>
             <h3 className="mt-ds-sm text-heading font-bold text-foreground" data-oid="71847337a9">Prefer we plan it for you?</h3>
-            <p className="mt-ds-md text-body text-muted-foreground" data-oid="625befa49c">Share the basics. Our operations team builds a vendor-backed quotation, reconfirms availability, and assigns a trip coordinator once you approve.</p>
+            <p className="mt-ds-md text-body text-muted-foreground" data-oid="625befa49c">Share the basics and we’ll send a quote.</p>
             <ol className="mt-ds-lg space-y-ds-sm" data-oid="23944c10db">
-              <li className="text-label text-foreground" data-oid="9f1609e5ed">1. Tell us destinations, dates and budget</li>
-              <li className="text-label text-foreground" data-oid="fa5f897830">2. Receive an itemized, vendor-backed quote</li>
-              <li className="text-label text-foreground" data-oid="bec1049736">3. Approve, then pay an advance</li>
-              <li className="text-label text-foreground" data-oid="a48fc8df11">4. Meet your coordinator and final itinerary</li>
+              <li className="text-label text-foreground" data-oid="9f1609e5ed">1. Share your plans</li>
+              <li className="text-label text-foreground" data-oid="fa5f897830">2. Get a quote</li>
+              <li className="text-label text-foreground" data-oid="bec1049736">3. Approve and pay advance</li>
+              <li className="text-label text-foreground" data-oid="a48fc8df11">4. Meet your coordinator</li>
             </ol>
           </div>
           <form
@@ -83,7 +83,7 @@ export function PackagesSection({ onLoad }: { onLoad: (patch: Partial<Trip>) => 
               e.preventDefault()
               setSent(`MY-DEMO-${Math.floor(1000 + Math.random() * 9000)}`)
               e.currentTarget.reset()
-            }} data-oid="6b7b1cee36" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|element:div|element:div|element:div|element:div|expression:cad6c17ea330"
+            }} data-oid="6b7b1cee36" data-oid-text-editable="false" data-oid-text-source="element:div|element:div|element:div|element:div|element:div|element:div|expression:47a89c052e21"
           >
             <div className="ds-field sm:col-span-2" data-oid="e69512022c">
               <label htmlFor="my-dest" className="ds-field-label" data-oid="0522417499">Destinations</label>
@@ -111,7 +111,7 @@ export function PackagesSection({ onLoad }: { onLoad: (patch: Partial<Trip>) => 
             </div>
             {sent && (
               <p role="status" className="rounded-lg bg-success/10 p-ds-md text-label text-success sm:col-span-2" data-oid="4227e6804a" data-oid-text-editable="false" data-oid-text-source="text|expression:27e7700fdaa1|text">
-                Demo request {sent} recorded in this browser only. In the live product, our operations team would reply with a quotation.
+                Demo request {sent} saved. Nothing was sent.
               </p>
             )}
           </form>

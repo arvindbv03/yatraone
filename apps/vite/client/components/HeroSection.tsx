@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, MapPin, Search, ShieldCheck } from "lucide-react"
+import { ArrowRight, MapPin, Search } from "lucide-react"
 import { assetPath } from "../lib/assetPath"
 import { byId, type Trip } from "../lib/yatra"
 
@@ -21,13 +21,13 @@ export function HeroSection({ trip, onSearch }: { trip: Trip; onSearch: (q: stri
         <div className="lg:col-span-6" data-oid="f8eba61fa9">
           <p className="inline-flex items-center gap-ds-sm rounded-full border border-border bg-card px-ds-md py-ds-xs text-label font-semibold text-primary" data-oid="df54adb299">
             <MapPin className="h-4 w-4" data-oid="ce3a778a4c" />
-            Now planning journeys across South India
+            South India pilgrimages
           </p>
           <h1 className="mt-ds-lg text-[44px] font-extrabold leading-[1.08] tracking-[-0.03em] text-foreground md:text-[64px]" data-oid="a82ffbbaaa">
             Pilgrimages planned around the people you travel with.
           </h1>
           <p className="mt-ds-lg max-w-xl text-lg leading-relaxed text-muted-foreground" data-oid="45d83227d4">
-            Build a multi-temple Yatra for your family, parents or group — verified hotels, drivers and guides, senior-friendly pacing, and itemized estimates before anything is booked.
+            Multi-temple trips with verified stays, drivers and senior-friendly pacing.
           </p>
 
           <form
@@ -64,7 +64,7 @@ export function HeroSection({ trip, onSearch }: { trip: Trip; onSearch: (q: stri
               Build a Yatra
               <ArrowRight className="ml-ds-xs h-4 w-4" data-oid="a564e1da58" />
             </a>
-            <a href="#packages" className="ds-button ds-button-secondary" data-oid="950a3c03fd">Request a Managed Yatra</a>
+            <a href="#packages" className="ds-button ds-button-secondary" data-oid="950a3c03fd">Let us plan it</a>
           </div>
         </div>
 
@@ -83,14 +83,10 @@ export function HeroSection({ trip, onSearch }: { trip: Trip; onSearch: (q: stri
           </div>
 
           <div className="relative -mt-ds-3xl max-w-sm rounded-xl border border-border bg-card p-ds-lg shadow-xl lg:absolute lg:bottom-ds-xl lg:left-0 lg:mt-0" data-oid="9474837878">
-            <p className="text-caption font-medium uppercase text-muted-foreground" data-oid="3bbaf12a32">Your draft Yatra</p>
+            <p className="text-caption font-medium uppercase text-muted-foreground" data-oid="3bbaf12a32">Your Yatra</p>
             <p className="mt-ds-sm text-label font-semibold text-foreground" data-oid="a20ea21d87">{route.join(" → ")}</p>
             <p className="mt-ds-xs text-label text-muted-foreground" data-oid="8993a05a57" data-oid-text-editable="false" data-oid-text-source="expression:5fa3d57571c1|text|expression:b62662e25443|text|expression:23376227b278|text|expression:aa9e3e529011">
               {trip.days} days · {pax} travellers · {trip.seniors} senior{trip.seniors === 1 ? "" : "s"}
-            </p>
-            <p className="mt-ds-md flex items-center gap-ds-sm text-caption font-medium text-success" data-oid="d78a716b22">
-              <ShieldCheck className="h-4 w-4" data-oid="1da3413cd6" />
-              Wheelchair needs carried through every step
             </p>
           </div>
         </div>

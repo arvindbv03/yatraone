@@ -28,12 +28,12 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
     <section id="addons" className="scroll-mt-20 bg-primary text-primary-foreground" data-oid="639a2b0be2" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
       <div className="mx-auto max-w-7xl px-ds-lg py-ds-3xl" data-oid="d775ed7a91">
         <div className="grid gap-ds-xl lg:grid-cols-12" data-oid="bf43d355ed">
-          <div className="lg:col-span-4" data-oid="ebc6a311ba" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:f01e741ab29b">
+          <div className="lg:col-span-4" data-oid="ebc6a311ba" data-oid-text-editable="false" data-oid-text-source="element:p|element:h2|element:p|expression:f1928452a918">
             <p className="text-label font-semibold uppercase text-secondary" data-oid="da93016e1e">Step 4 · Extra help (optional)</p>
-            <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em]" data-oid="1b0453d598">Help on the ground, from verified local providers</h2>
-            <p className="mt-ds-md text-body opacity-80" data-oid="a597f1724b">Every add-on is fulfilled by a KYC-verified vendor and appears as its own line in your estimate.</p>
+            <h2 className="mt-ds-sm text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em]" data-oid="1b0453d598">Help on the ground</h2>
+            <p className="mt-ds-md text-body opacity-80" data-oid="a597f1724b">From verified local vendors.</p>
             {needsChair && (
-              <p className="mt-ds-lg rounded-lg bg-secondary p-ds-md text-label text-secondary-foreground" data-oid="81a37d2ae0">You’ve requested wheelchair assistance — consider adding a wheelchair rental or attendant.</p>
+              <p className="mt-ds-lg rounded-lg bg-secondary p-ds-md text-label text-secondary-foreground" data-oid="81a37d2ae0">Tip: add a wheelchair or attendant.</p>
             )}
           </div>
 
@@ -41,7 +41,7 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
             <div className="flex flex-col rounded-xl bg-card p-ds-lg text-card-foreground" data-oid="8b07e5719e">
               <UserRound className="h-6 w-6 text-primary" data-oid="3d09e1176d" />
               <h3 className="mt-ds-md text-lg font-bold" data-oid="30f1bd84f6">Licensed local guide</h3>
-              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="38390d32c5">Explains history and temple customs in Tamil, Telugu, Kannada, Malayalam or English.</p>
+              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="38390d32c5">Speaks Tamil, Telugu, Kannada, Malayalam or English.</p>
               <div className="mt-ds-md flex items-center justify-between" data-oid="616052cd86">
                 <p className="text-label font-semibold" data-oid="e6e89b83c6" data-oid-text-editable="false" data-oid-text-source="expression:00578a5cf85f|element:span">{inr(1500)} <span className="font-normal text-muted-foreground" data-oid="25372406a8">/ day</span></p>
                 <Stepper id="guide" label="guide" api={api} />
@@ -50,7 +50,7 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
             <div className="flex flex-col rounded-xl bg-card p-ds-lg text-card-foreground" data-oid="1cfa02839d">
               <Accessibility className="h-6 w-6 text-primary" data-oid="891fb8dd51" />
               <h3 className="mt-ds-md text-lg font-bold" data-oid="a5e9de7445">Wheelchair rental</h3>
-              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="67c6468e31">Foldable chairs delivered to your hotel and loaded into your vehicle.</p>
+              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="67c6468e31">Delivered to your hotel.</p>
               <div className="mt-ds-md flex items-center justify-between" data-oid="8d59a2d942">
                 <p className="text-label font-semibold" data-oid="aa589d1779" data-oid-text-editable="false" data-oid-text-source="expression:96a44e067e32|element:span">{inr(400)} <span className="font-normal text-muted-foreground" data-oid="14ae7aef5d">/ chair / day</span></p>
                 <Stepper id="wheelchair" label="wheelchair" api={api} />
@@ -59,7 +59,7 @@ export function AddOnMarketplace({ api }: { api: TripApi }) {
             <div className="flex flex-col rounded-xl bg-card p-ds-lg text-card-foreground" data-oid="5d6d6294ef">
               <HandHeart className="h-6 w-6 text-primary" data-oid="7dff264ad6" />
               <h3 className="mt-ds-md text-lg font-bold" data-oid="3bec3ebbca">Trained attendant</h3>
-              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="cb20969d1b">Accompanies elders through queues, stairs and long corridors.</p>
+              <p className="mt-ds-xs flex-1 text-label text-muted-foreground" data-oid="cb20969d1b">Helps elders through queues and stairs.</p>
               <div className="mt-ds-md flex items-center justify-between" data-oid="9dcbf88a44">
                 <p className="text-label font-semibold" data-oid="e4052772e3" data-oid-text-editable="false" data-oid-text-source="expression:01efbac7dc43|element:span">{inr(1800)} <span className="font-normal text-muted-foreground" data-oid="f7b5e26209">/ day</span></p>
                 <Stepper id="attendant" label="attendant" api={api} />
