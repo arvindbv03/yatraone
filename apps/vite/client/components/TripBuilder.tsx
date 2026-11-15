@@ -38,7 +38,7 @@ export function TripBuilder({ api }: { api: TripApi }) {
               <Save className="mr-ds-xs h-4 w-4" data-oid="516f0eaba7" />
               Save draft
             </button>
-            <p className="text-caption text-muted-foreground" aria-live="polite" data-oid="50b3468fb1">{savedAt ? `Draft saved on this device at ${savedAt}` : "Drafts are stored only in this browser"}</p>
+            <p className="text-caption text-muted-foreground" aria-live="polite" data-oid="50b3468fb1">{savedAt ? `Saved automatically on this device at ${savedAt}` : "Your plan saves automatically in this browser"}</p>
           </div>
         </div>
 

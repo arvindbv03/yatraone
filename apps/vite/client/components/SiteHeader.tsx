@@ -11,15 +11,15 @@ export function SiteHeader({ stopCount }: { stopCount: number }) {
           YatraOne
         </a>
         <nav className="hidden items-center gap-ds-lg lg:flex" aria-label="Sections" data-oid="4ba2866b24">
-          <a href="#discover" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="e6b5805093">Destinations</a>
-          <a href="#builder" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="729683fa50">Trip builder</a>
-          <a href="#itinerary" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="ce63248c5c">Itinerary</a>
-          <a href="#addons" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="4872d9f5ff">Add-ons</a>
+          <a href="#discover" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="e6b5805093">1. Pick temples</a>
+          <a href="#builder" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="729683fa50">2. Dates & travellers</a>
+          <a href="#itinerary" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="ce63248c5c">3. Plan & price</a>
+          <a href="#addons" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="4872d9f5ff">4. Extra help</a>
           <a href="#packages" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="22543848a6">Packages</a>
-          <a href="#trust" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="e39c2a137c">Why YatraOne</a>
+          <a href="#trust" className="text-label font-semibold text-muted-foreground hover:text-primary" data-oid="e39c2a137c">Why us</a>
         </nav>
         <a href="#builder" className="ds-button ds-button-primary" data-oid="1eb507b5b4">
-          My Yatra
+          My trip
           <span className="ml-ds-xs rounded-full bg-primary-foreground px-ds-sm text-caption font-semibold text-primary" data-oid="f6b9453887">{stopCount}</span>
         </a>
       </div>

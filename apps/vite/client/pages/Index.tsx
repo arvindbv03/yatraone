@@ -2,6 +2,8 @@ import { useMemo, useState } from "react"
 import { AddOnMarketplace } from "../components/AddOnMarketplace"
 import { DiscoverySection } from "../components/DiscoverySection"
 import { HeroSection } from "../components/HeroSection"
+import { HowItWorks } from "../components/HowItWorks"
+import { TripTray } from "../components/TripTray"
 import { ItineraryPreview } from "../components/ItineraryPreview"
 import { PackagesSection } from "../components/PackagesSection"
 import { QuotationSummary } from "../components/QuotationSummary"
@@ -18,9 +20,10 @@ export default function Index() {
   const days = useMemo(() => buildItinerary(api.trip), [api.trip])
 
   return (
-    <main className="min-h-screen bg-background text-foreground" data-oid="edbc040ca8" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
+    <main className="min-h-screen bg-background pb-24 text-foreground" data-oid="edbc040ca8" data-oid-component-root="true" data-oid-callsite-deletable="true" data-oid-callsite-single="true">
       <SiteHeader stopCount={api.trip.destinationIds.length} />
       <HeroSection trip={api.trip} onSearch={setQuery} />
+      <HowItWorks stopCount={api.trip.destinationIds.length} />
       <DiscoverySection query={query} setQuery={setQuery} selected={api.trip.destinationIds} onToggle={api.toggleDestination} />
       <TripBuilder api={api} />
       <section className="border-t border-border bg-muted/40" data-oid="fd810209d4">
@@ -37,6 +40,7 @@ export default function Index() {
       <PackagesSection onLoad={api.update} />
       <TrustSection />
       <SiteFooter />
+      <TripTray api={api} />
     </main>
   )
 }

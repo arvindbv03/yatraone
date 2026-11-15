@@ -6,6 +6,7 @@ const KEY = "yatraone-draft"
 export function useTrip() {
   const [trip, setTrip] = useState<Trip>(DEFAULT_TRIP)
   const [savedAt, setSavedAt] = useState<string | null>(null)
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
     try {
@@ -18,7 +19,25 @@ export function useTrip() {
     } catch {
       /* ignore corrupt draft */
     }
+    setHydrated(true)
   }, [])
+
+  // Auto-save every change so travellers never lose their plan.
+  useEffect(() => {
+    if (!hydrated) return
+    const id = window.setTimeout(() => {
+      const at = new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ trip, savedAt: at }))
+        setSavedAt(at)
+      } catch {
+        /* storage unavailable */
+      }
+    }, 600)
+    return () => window.clearTimeout(id)
+  }, [trip, hydrated])
+
+  const reset = useCallback(() => setTrip({ ...DEFAULT_TRIP, destinationIds: [] }), [])
 
   const update = useCallback((patch: Partial<Trip>) => setTrip((t) => ({ ...t, ...patch })), [])
 
@@ -52,7 +71,7 @@ export function useTrip() {
     setSavedAt(at)
   }, [])
 
-  return { trip, update, toggleDestination, move, setAddOn, saveDraft, savedAt }
+  return { trip, update, toggleDestination, move, setAddOn, saveDraft, savedAt, reset }
 }
 
 export type TripApi = ReturnType<typeof useTrip>
